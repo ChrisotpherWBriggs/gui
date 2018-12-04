@@ -1,0 +1,52 @@
+ FileDelete, C:\Users\CBriggs\Desktop\TFTest\scripts\temp\user.csv
+
+2:
+inputbox,user,Enter UserName,User Name (email):
+inputbox,pword,Enter Password:
+
+msgbox, %user%
+msgbox, %pword%
+
+FileRead, valid, C:\Users\CBriggs\Desktop\TFTest\test.csv
+if not ErrorLevel
+{
+		FileRead, text, C:\Users\CBriggs\Desktop\TFTest\scripts\user.txt
+		FileDelete, C:\Users\CBriggs\Desktop\TFTest\scripts\user.bat
+		FileAppend, %text% ,C:\Users\CBriggs\Desktop\TFTest\scripts\user.bat
+}
+sleep 200
+run C:\Users\CBriggs\Desktop\TFTest\scripts\user.bat
+sleep 200
+
+
+
+;FileGetSize, usercheck, C:\Users\CBriggs\Desktop\TFTest\scripts\temp\user.csv */
+
+
+#include C:\Users\CBriggs\Desktop\TFTest\scripts\user.ahk 
+ for k,v in Array
+	msgbox % k
+	if Array.Haskey(k)
+	{
+		msgbox user found
+	}
+	else 
+	{
+		msgbox user not found
+		gosub 2
+	}
+	if Array.Haskey(k) & Array[k] == %pword1%
+	{
+		msgbox Welcome
+		run	C:\Users\CBriggs\Desktop\TFTest\gui.ahk
+	}
+	else 
+	{
+		msgbox Invalid Password
+		gosub 2
+	}
+return
+
+
+
+
