@@ -22,7 +22,9 @@ gui, add, tab2, buttons top, Home| Claim Search | Accumulator
 ;------Home Tab
 
 gui, tab, 1
-gui, Add, Picture, w379 h127,C:\Users\CBriggs\Desktop\TFTest\scripts\files\logo.png
+
+gui,add,text,,Checklist
+gui, Add, Picture,,%A_WorkingDir%\scripts\files\images\friday.jpg
 
 ;--------------
 
@@ -43,7 +45,7 @@ gui,Font,s16 c0x008c91
 gui,add,text,, This is the Accumulator
 ;------------------------
 
-gui, show, w1024 h768, RX Database
+gui, show, AutoSize, RX Database
 
 ;----------
 

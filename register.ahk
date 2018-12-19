@@ -1,5 +1,5 @@
 #SingleInstance, Force
-gui, Add, Picture, w379 h127 x300,C:\Users\CBriggs\Desktop\TFTest\scripts\files\logo.png
+gui, Add, Picture, w379 h127 x300,%A_WorkingDir%\scripts\files\images\logo.png
 
 gui,add,text,x300,User Name
 gui,1:add,edit,vuser x300
@@ -21,7 +21,7 @@ gui, show, w1024 h768, RX Add User
 return
 
 ButtonSubmit:
-#include C:\Users\CBriggs\Desktop\TFTest\scripts\user.ahk
+#include C:\Users\CBriggs\Desktop\RX_Data\scripts\files\user_files\user.ahk
 gui, Submit
 for k,v in Array
   k = %user%
@@ -29,16 +29,16 @@ for k,v in Array
   if Array.HasKey(k)
   {
     msgbox User Already Exists Please Try Again
-    run C:\Users\CBriggs\Desktop\TFTest\register.ahk
+    run %A_WorkingDir%\register.ahk
   }
   else
     
-    FileDelete C:\Users\CBriggs\Desktop\TFTest\test.txt
+    FileDelete %A_WorkingDir%\files\user_files\test.txt
     FileAppend, 
     (
     
 %user%,%pword%,%fname%,%lname%,%age%
-    ), C:\Users\CBriggs\Desktop\TFTest\test.txt
-    run C:\Users\CBriggs\Desktop\TFTest\add.bat
+    ), %A_WorkingDir%\scripts\files\user_files\test.txt
+    run %A_WorkingDir%\scripts\files\user_files\add.bat
     msgbox User: %user% added please login
-    run C:\Users\CBriggs\Desktop\TFTest\login.ahk
+    run %A_WorkingDir%\login.ahk

@@ -1,0 +1,6 @@
+cbriggs,password1 
+jsmith,password1 
+jjohnson,password1 
+phoward,password1 
+mhudzik,password1 
+cdickson,password1 
