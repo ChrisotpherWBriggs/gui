@@ -53,7 +53,7 @@ return
 ;-----labels
 FileNew:
 	FileSelectFile, newFile
-	run %newFile%
+	msgbox, %newFile%
 
 ;-----------
 

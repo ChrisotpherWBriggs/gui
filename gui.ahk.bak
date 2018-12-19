@@ -22,10 +22,10 @@ gui, add, tab2, buttons top, Home| Claim Search | Accumulator
 ;------Home Tab
 
 gui, tab, 1
-gui, Add, Picture,,%A_WorkingDir%\scripts\files\images\friday.jpg
+
 gui,add,text,,Checklist
 gui, Add, Picture,,%A_WorkingDir%\scripts\files\images\friday.jpg
-gui, Add, Picture,xm,%A_WorkingDir%\scripts\files\images\friday.jpg
+gui, add, Tab2, buttons left, Page One| Page Two| Page 3 | Page 4
 ;--------------
 
 ;--------Search Tab
@@ -53,7 +53,7 @@ return
 ;-----labels
 FileNew:
 	FileSelectFile, newFile
-	run %newFile%
+	msgbox, %newFile%
 
 ;-----------
 
